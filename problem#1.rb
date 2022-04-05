@@ -5,8 +5,8 @@
 require 'json'
 abort('wrong number of params') unless ARGV.length == 2
 
-p1 =  JSON.parse(ARGV[0]).map(&:to_i)
-p2 = ARGV[1].to_i
+input1 =  JSON.parse(ARGV[0]).map(&:to_i)
+input2 = ARGV[1].to_i
 #TODO: Implement errors control 
-p !p1.permutation(2).to_a.map { |x| x.inject(:+) }.select { |x| x == p2 }.first.nil?
+p !input1.permutation(2).to_a.map { |x| x.inject(:+) }.select { |x| x == input2 }.first.nil?
 
